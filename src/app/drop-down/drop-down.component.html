@@ -1,0 +1,15 @@
+<div>
+  <input
+    type="text"
+    placeholder="search"
+    [(ngModel)]="search"
+    (ngModelChange)="valueChanged($event)"
+  />
+  <div *ngIf="options.length">
+    <select name="data" id="data" onchange="alert(value)">
+      <option *ngFor="let opt of options" [value]="opt.title">
+        {{ opt.title }}
+      </option>
+    </select>
+  </div>
+</div>
